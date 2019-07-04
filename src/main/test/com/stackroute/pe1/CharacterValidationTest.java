@@ -7,34 +7,34 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class CharacterValidationTest {
-    CharacterValidation ob;
+    CharacterValidation characterValidation;
     @Before
     public void setUp()
     {
         System.out.println("Before");
     }
     @Test
-    public void characterTestAndReturnCapital()
+    public void givenInputStringShouldReturnUpperCaseLetter()
     {
-        ob = new CharacterValidation();
-        char res=ob.characterCheck('A');
+        characterValidation = new CharacterValidation();
+        char res=characterValidation.characterCheck('A');
         assertEquals("test failed",'A',res);
         System.out.println("TestCase1");
 
     }
     @Test
-    public void characterTestAndReturnSmall()
+    public void givenInputStringShouldReturnSmallerCaseLetter()
     {
-        ob = new CharacterValidation();
-        char res=ob.characterCheck('a');
+        characterValidation = new CharacterValidation();
+        char res=characterValidation.characterCheck('a');
         assertEquals("test failed",'a',res);
         System.out.println("TestCase2");
     }
     @Test
-    public void characterTestAndReturnDigits()
+    public void givenInputStringShouldReturnDigit()
     {
-        ob = new CharacterValidation();
-        char res=ob.characterCheck('5');
+        characterValidation= new CharacterValidation();
+        char res=characterValidation.characterCheck('5');
         assertEquals("test passed",'5',res);
         System.out.println("TestCase3");
     }

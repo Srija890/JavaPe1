@@ -7,31 +7,31 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class ReverseStringTest {
-    ReverseString obj=new ReverseString();
+    ReverseString reverseString=new ReverseString();
     @Before
     public void setUp()
     {
         System.out.println("Before");
     }
     @Test
-    public void getStringReverseAndComapare()
+    public void givenInputStringShouldReturnReversedString()
     {
-        String a=obj.revString("srija");
-        assertEquals("test case failed","ajirs",a);
+        String str=reverseString.revString("srija");
+        assertEquals("test case failed","ajirs",str);
         System.out.println("TestCase1");
     }
     @Test
-    public void getStringReverseAndComapareSpace()
+    public void givenInputStringShouldReturnReversedStringAndSpace()
     {
-        String a=obj.revString("srija ");
-        assertEquals("test case failed"," ajirs",a);
+        String str=reverseString.revString("srija ");
+        assertEquals("test case failed"," ajirs",str);
         System.out.println("TestCase2");
     }
     @Test
-    public void passNullAndCompare()
+    public void givenInputStringShouldReturnNull()
     {
-        String a=obj.revString(" ");
-        assertEquals("test case failed"," ",a);
+        String str=reverseString.revString(" ");
+        assertEquals("test case failed"," ",str);
         System.out.println("TestCase3");
     }
     @After

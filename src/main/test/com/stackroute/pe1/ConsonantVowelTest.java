@@ -7,40 +7,27 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class ConsonantVowelTest {
-    ConsonantVowel obj=new ConsonantVowel();
+    ConsonantVowel consonantVowel=new ConsonantVowel();
     @Before
     public void setUp()
     {
         System.out.println("Before");
     }
     @Test
-    public void checkConsonantAndReturn()
+    public void givenInputStringShouldReturnConsonant()
     {
-        String a=obj.check("d");
-        assertEquals("test case passed","Consonant",a);
+        String str=consonantVowel.check("d");
+        assertEquals("test case passed","Consonant",str);
         System.out.println("TestCase1");
     }
     @Test
-    public void checkVowelAndReturn()
+    public void givenInputStringShouldReturnVowel()
     {
-        String a=obj.check("a");
-        assertEquals("test case passed","Vowel",a);
+        String str=consonantVowel.check("a");
+        assertEquals("test case passed","Vowel",str);
         System.out.println("TestCase2");
     }
-    @Test
-    public void checkIfNotMatchesReturnDigitNotMatching()
-    {
-        String a=obj.check("4");
-        assertEquals("test case passed","Input is not a letter",a);
-        System.out.println("TestCase3");
-    }
-    @Test
-    public void checkIfNotMatchesReturn()
-    {
-        String a=obj.check("%");
-        assertEquals("test case passed","Input is not a letter",a);
-        System.out.println("TestCase4");
-    }
+
     @After
     public void tearDown()
     {
